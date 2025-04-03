@@ -1,0 +1,19 @@
+program caso1;
+var 
+	i, num: integer;
+	nombre: array[1..100] of char;
+	c: char;
+begin
+	writeln('Programa que detecta el nombre');
+	writeln('Ingrese la cantidad de elementos del nombre: ');
+	readln(num);
+	writeln('Ingrese el nombre letra por letra: ');
+	for i:=1 to num do
+		begin
+		read(c);
+		nombre[i] := c;
+		end;
+  	writeln('El nombre ingresado es: ');
+  	for i := 1 to num do
+    	write(nombre[i]);
+end.

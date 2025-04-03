@@ -1,0 +1,13 @@
+program Caso4;
+var 
+	num: integer;
+begin
+	writeln('Ingrese un numero:');
+	readln(num);
+	if num > 100 then
+		writeln('El numero es mayor que 100.')
+	else if num < 100 then
+		writeln('El numero es menor que 100.')
+	else
+		writeln('El numero es igual a 100.');
+end.

@@ -1,0 +1,103 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program caso5;
+    2     0 var 
+    3     0  num: integer;
+    4     0 begin
+    5     0  writeln('Ingrese un numero del 1 al 7 :');
+    6     3  readln(num);
+    7     6  if (num<=0) or (num>7) then
+    8    14   writeln('Numero incorrecto')
+    9    16  else
+   10    17   case (num) of
+   11    20   1: writeln('Lunes');
+   12    24   2: writeln('Martes');
+   13    28   3: writeln('Miercoles');
+   14    32   4: writeln('Jueves');
+   15    36   5: writeln('Viernes');
+   16    40   6: writeln('Sabado');
+   17    44   7: writeln('Domingo');
+   18    48  end;
+   19    63 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 num          46     variable    integer         0      True    1    5    0
+
+Generated P-code
+
+    0     ldcon.i      0        30          ;5
+    1     wrstr        0         0          ;5
+    2     wrlin        0         0          ;5
+    3     ldadr        1         5          ;6
+    4     rdinp.i      0         0          ;6
+    5     rdlin        0         0          ;6
+    6     ldval.i      1         5          ;7
+    7     ldcon.i      0         0          ;7
+    8     relle.i      0         0          ;7
+    9     ldval.i      1         5          ;7
+   10     ldcon.i      0         7          ;7
+   11     relgt.i      0         0          ;7
+   12     iorop.b      0         0          ;7
+   13     jmpiz        0        18          ;7
+   14     ldcon.i      0        17          ;8
+   15     wrstr        0        30          ;8
+   16     wrlin        0         0          ;8
+   17     jmpuc        0        63          ;8
+   18     ldval.i      1         5          ;10
+   19     jmpuc        0        48          ;10
+   20     ldcon.i      0         5          ;11
+   21     wrstr        0        47          ;11
+   22     wrlin        0         0          ;11
+   23     jmpuc        0        63          ;11
+   24     ldcon.i      0         6          ;12
+   25     wrstr        0        52          ;12
+   26     wrlin        0         0          ;12
+   27     jmpuc        0        63          ;12
+   28     ldcon.i      0         9          ;13
+   29     wrstr        0        58          ;13
+   30     wrlin        0         0          ;13
+   31     jmpuc        0        63          ;13
+   32     ldcon.i      0         6          ;14
+   33     wrstr        0        67          ;14
+   34     wrlin        0         0          ;14
+   35     jmpuc        0        63          ;14
+   36     ldcon.i      0         7          ;15
+   37     wrstr        0        73          ;15
+   38     wrlin        0         0          ;15
+   39     jmpuc        0        63          ;15
+   40     ldcon.i      0         6          ;16
+   41     wrstr        0        80          ;16
+   42     wrlin        0         0          ;16
+   43     jmpuc        0        63          ;16
+   44     ldcon.i      0         7          ;17
+   45     wrstr        0        86          ;17
+   46     wrlin        0         0          ;17
+   47     jmpuc        0        63          ;17
+   48     ldcon.i      0         1          ;17
+   49     case1.i      0        20          ;17
+   50     ldcon.i      0         2          ;17
+   51     case1.i      0        24          ;17
+   52     ldcon.i      0         3          ;17
+   53     case1.i      0        28          ;17
+   54     ldcon.i      0         4          ;17
+   55     case1.i      0        32          ;17
+   56     ldcon.i      0         5          ;17
+   57     case1.i      0        36          ;17
+   58     ldcon.i      0         6          ;17
+   59     case1.i      0        40          ;17
+   60     ldcon.i      0         7          ;17
+   61     case1.i      0        44          ;17
+   62     case2        0         0          ;17
+   63     stopx        0         0          ;18

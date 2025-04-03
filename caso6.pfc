@@ -1,0 +1,19 @@
+program caso6;
+var 
+	importe: real;
+	total: real;
+begin
+	writeln('Ingrese el importe total de la compra en S/:');
+	readln(importe);
+
+	if importe >= 150 then
+		begin
+			total := importe - (importe * 0.10);
+			writeln('El total a pagar es S/.', total:0:2);
+		end
+	else
+		begin
+			total := importe;
+			writeln('El total a pagar es S/.', total:0:2);
+		end;
+end.

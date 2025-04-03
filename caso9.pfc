@@ -1,0 +1,13 @@
+program caso9;
+var
+  i: Integer;
+
+begin
+  writeln('Los números múltiplos de 7 entre 1 y 100 son:');
+ 
+  for i := 1 to 100 do
+  begin
+    if (i mod 7 = 0) then
+      writeln(i);
+  end;
+end.
