@@ -1,4 +1,70 @@
 program caso10;
+var
+	cuenta, clave, trans: integer;
+	num: integer;
+	op, v: char;
 begin
-
+	num := 0; 
+	cuenta := 1000;
+	clave:=2512;
+	writeln('Escriba la clave: ');
+	read(clave);
+	if (clave<>2512) then
+		writeln('Clave incorrecta')
+	else
+		while (op<>'s') do
+		begin 
+			writeln('Menu de opciones: ');
+			writeln('a. Extraer Dinero');
+			writeln('b. Depositar dinero ');
+			writeln('c. Transferir dinero');
+			writeln('d. Consultar saldo ');
+			writeln('s. Salir ');
+			writeln('Escriba su opcion: ');
+			readln;
+			readln(op);
+			if (op='a') then
+			begin
+				writeln('Cuanto deseas extraer?: ');
+					readln(num);
+					cuenta:= cuenta-num;
+					writeln('Desea ver su saldo luego de la operacion?(s/n)');
+					read(v);
+					if (v='s') then
+						begin
+							writeln('Su saldo es s/.',cuenta);
+						end;
+			end;
+			if (op='b') then
+			begin
+				writeln('Cuanto deseas depositar?: ');
+					readln(num);
+					cuenta:= cuenta+num;
+					writeln('Desea ver su saldo luego de la operacion?(s/n)');
+					read(v);
+					if (v='s') then
+						begin
+							writeln('Su saldo es s/.',cuenta);
+						end;
+			end;
+			if (op='c') then		
+			begin
+				writeln('Escriba el numero de cuenta a depositar (4 numeros)');
+					 readln(trans);
+					 writeln('Escriba la cantidad a transferir');
+					 readln(num);
+					 cuenta:= cuenta-num;
+					 writeln('Desea ver su saldo luego de la operacion?(s/n)');
+					 read(v);
+					 if (v='s') then
+						begin
+							writeln('Su saldo es s/.',cuenta);
+						end;
+			end;
+			if (op='d') then
+			begin
+			writeln('Su saldo es s/.',cuenta);
+			end;		
+		end;
+		writeln('Saliendo del programa....');
 end.
